@@ -1,14 +1,14 @@
 <html>
     <head>
         <link href="style.css" rel="stylesheet">
-        <title>Olivia's Website</title>
+        <title>Olivia's Website | Home</title>
     </head>
     <body>
         <header id="header">
             <a href="#" class="logo">OLIVIA</a>
             <ul>
                 <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">Projects</a></li>
+                <li><a href="projects.html">Projects</a></li>
                 <li><a href="#">Contact</a></li>
 
             </ul>
@@ -20,8 +20,12 @@
             <img src="assets/landscape.png" id="landscape">
         </section>
         <div class="sec" id="sec">
-            <h2>Text 2</h2>
-            <p>hello my name is olivia and i am here</p>
+            <h2>About Me</h2>
+            <p>
+                Hi! My name is Olivia Zhang, and I'm a freshman studying Computer Science at the University of Maryland-College Park! I'm originally from San Diego, California, but came to Maryland for a change of scenery and UMD's excellent CS program.
+                <br><br>
+                I'm a woman of many interests, some of which include figure skating, playing video games, crocheting, playing the cello, and many more!
+            </p>
         </div>
         
         <script>
@@ -35,8 +39,7 @@
                 let yVal = window.scrollY;
                 stars.style.left = yVal * 0.25 + 'px';
                 landscape.style.top = yVal * 0 + 'px';
-                text.style.marginRight = yVal * 3 + 'px';
-                text.style.marginTop = yVal * 1.0 + 'px';
+                text.style.marginTop = yVal * -2.0 + 'px';
                 button.style.marginTop = yVal * 1.5 + 'px';
                 header.style.top = yVal * 0.5 + 'px';
             })

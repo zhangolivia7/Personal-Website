@@ -86,7 +86,7 @@ section img {
 }
 
 section #text {
-    right: 150px;
+    right: 3em;
     top: 300px;
 }
 
@@ -126,5 +126,6 @@ section img#landscape {
 }
 
 .sec p {
-
+    color: #fff;
+    
 }
