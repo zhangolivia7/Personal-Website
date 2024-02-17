@@ -5,12 +5,41 @@
     </head>
     <body>
         <header id="header">
-            <h1>Olivia's Website</h1>
-            <hr>
+            <a href="#" class="logo">OLIVIA</a>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
 
+            </ul>
         </header>
-        <main>
-            
-        </main>
+        <section>
+            <img src="assets/stars.png" id="stars">
+            <h2 id="text">Olivia Zhang</h2>
+            <a href="#sec" id="button">Arrow</a>
+            <img src="assets/landscape.png" id="landscape">
+        </section>
+        <div class="sec" id="sec">
+            <h2>Text 2</h2>
+            <p>hello my name is olivia and i am here</p>
+        </div>
+        
+        <script>
+            let stars = document.getElementById("stars");
+            let landscape = document.getElementById("landscape");
+            let text = document.getElementById("text");
+            let button = document.getElementById("button");
+            let header = document.querySelector('header');
+
+            window.addEventListener('scroll', function() {
+                let yVal = window.scrollY;
+                stars.style.left = yVal * 0.25 + 'px';
+                landscape.style.top = yVal * 0 + 'px';
+                text.style.marginRight = yVal * 3 + 'px';
+                text.style.marginTop = yVal * 1.0 + 'px';
+                button.style.marginTop = yVal * 1.5 + 'px';
+                header.style.top = yVal * 0.5 + 'px';
+            })
+        </script>
     </body>
 </html>
