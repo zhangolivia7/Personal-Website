@@ -60,6 +60,7 @@ section {
     height: 100vh;
     padding: 100px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     overflow: hidden;
@@ -102,17 +103,6 @@ section img#landscape {
     z-index: 9;
     right: -350px;
 }
-
-/* #button {
-    text-decoration: none;
-    padding: 8px 20px;
-    border-radius: 30px;
-    background: #fff;
-    color: #231f1f;
-    font-size: 1.5em;
-    z-index: 9;
-    transform: translateY(50px);
-} */
 
 .sec {
     position: relative;
