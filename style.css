@@ -61,8 +61,10 @@ section {
     padding: 100px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    padding-top: 300px;
+    padding-bottom: 50px;
     overflow: hidden;
 }
 
@@ -87,8 +89,9 @@ section img {
 }
 
 section #text {
-    right: 3em;
-    top: 300px;
+    font-size: 100px;
+    left: 50%;
+    transform: translate(-50%, -70%); 
 }
 
 section img#landscape {
@@ -99,15 +102,12 @@ section img#landscape {
     position: absolute;
     color: #fff;
     white-space: nowrap;
-    font-size: 8vw;
     z-index: 9;
-    right: -350px;
 }
 
 .sec {
     position: relative;
     padding: 100px;
-    padding-bottom: 50px;
 }
 
 .sec h2 {
@@ -136,7 +136,6 @@ section img#landscape {
 }
 
 #button {
-    margin-top: 20px;
     padding: 0.5em 1.5em;
     font-size: 1.5em;
     text-transform: uppercase;
