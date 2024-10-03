@@ -117,6 +117,7 @@ section img#landscape {
 .sec {
     position: relative;
     padding: 100px;
+    padding-bottom: 50px;
 }
 
 .sec h2 {
@@ -125,10 +126,25 @@ section img#landscape {
     margin-bottom: 10px;
 }
 
+.sec h3 {
+    color: #fff;
+}
+
+.sec .desc {
+    font-style: italic;
+    display: flex;
+    justify-content: space-between;
+}
+
 .sec p {
     color: #fff;
     
 }
+
+.projects {
+    padding-bottom: 30px;
+}
+
 #button {
     padding: 0.5em 1.5em;
     font-size: 1.5em;
