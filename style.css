@@ -59,8 +59,8 @@ header ul li a.active {
 }
 
 header img {
-    margin-left: 20px;
-    width: 6%;
+    width: 70px;
+    padding: 6px 15px;
 }
 
 header img:hover {
