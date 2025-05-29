@@ -194,6 +194,81 @@ section img#landscape {
     margin-bottom: 20px;
 }
 
+#projectButtons {
+    display: flex;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+button {
+    font-size: 17px;
+    background: transparent;
+    border: none;
+    padding: 1em 1.5em;
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #118595;
+    transition: 0.4s ease;
+}
+
+button:hover {
+    color: #231f1f;
+    transition-delay: 0.3s;
+}
+
+button:hover::before {
+    width: 100%;
+}
+
+button::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    background-color: #118595;
+    transition: 0.2s ease;
+    z-index: -1;
+    border-radius: 20px 20px 0px 0px;
+}
+
+button:hover::after {
+    height: 100%;
+    transition-delay: 0.3s;
+    color: #fff;
+}
+
+button.active {
+  color: #fff;
+}
+
+button.active::before {
+  width: 100%;
+}
+
+button.active::after {
+  height: 100%;
+  background-color: #118595;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.projects-section {
+    display: none;
+}
+
 .project {
     display: flex;
     align-items: center;

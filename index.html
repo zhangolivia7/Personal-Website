@@ -11,7 +11,7 @@
         <ul>
             <li><a href="header" class="active" id="topText">Home</a></li>
             <li><a href="#sec" id="topText">About Me</a></li>
-            <li><a href="#projects-section" id="topText">Projects</a></li>
+            <li><a href="#projectButtons" id="topText">Projects</a></li>
             <li>
                 <a href="https://github.com/zhangolivia7">
                     <img src="assets/github.png" alt="Github" />
@@ -98,7 +98,12 @@
 
     <div class="sec">
         <h2>Projects</h2>
-        <div class="projects-section" id="projects-section">
+        <div id="projectButtons">
+            <button id="fullStackBtn">Full Stack</button>
+            <button id="uiuxBtn">UI/UX</button>
+            <button id="graphicBtn">Graphic Design</button>
+        </div>
+        <div class="projects-section" id="fullStackSection">
             <!-- Project 1 -->
             <div class="project">
                 <div class="project-image">
@@ -145,6 +150,66 @@
                 </div>
             </div>
         </div>
+
+        <div class="projects-section" id="uiuxSection">
+            <!-- Project 1 -->
+            <div class="project">
+                <div class="project-image">
+                    <img src="assets/TrachSense.png" alt="ShellSeek" />
+                </div>
+                <div class="project-info">
+                    <h3>ShellSeek</h3>
+                    <h4>IDEA258U: Introduction to UI/UX Design</h4>
+                    <h4>January 2025 - May 2025</h4>
+                    <p>Re-designed and re-imagined the navigation app for University of Maryland students efficiently to
+                        locate buildings and rooms on campus, addressing issues with the current map.</p>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project">
+                <div class="project-info">
+                    <h3>Bitcamp Website</h3>
+                    <h4>Bitcamp</h4>
+                    <h4>October 2024 - April 2025</h4>
+                    <p>Collaborated with a team to research and design the Bitcamp hackathon website and mobile app
+                        using Figma and other design resources.</p>
+                </div>
+                <div class="project-image">
+                    <img src="assets/TrachSense.png" alt="Bitcamp" />
+                </div>
+            </div>
+        </div>
+
+        <div class="projects-section" id="graphicSection">
+            <!-- Project 1 -->
+            <div class="project">
+                <div class="project-image">
+                    <img src="assets/TrachSense.png" alt="TrachSense" />
+                </div>
+                <div class="project-info">
+                    <h3>Stream Assets</h3>
+                    <h4>Personal</h4>
+                    <h4>August 2024-August 2024</h4>
+                    <p>Designed re-branded stream assets for a small streamer, such as banners, screens, icons, etc.,
+                        all adhering to their branding and requests.</p>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project">
+                <div class="project-info">
+                    <h3>Lunar Banquet Graphics</h3>
+                    <h4>Chinese Student Association</h4>
+                    <h4>January 2024 - February 2024</h4>
+                    <p>Collaborated with the marketing team to design a variety of engaging graphics for CSA's Lunar
+                        Banquet, aimed at attracting and welcoming attendees.</p>
+                </div>
+                <div class="project-image">
+                    <img src="assets/TrachSense.png" alt="TrachSense" />
+                </div>
+            </div>
+        </div>
     </div>
 
     <div id="footer">
@@ -176,6 +241,48 @@
             text.style.marginTop = yVal * -2.0 + 'px';
             header.style.top = yVal * 0.5 + 'px';
         })
+
+        const fullStackBtn = document.getElementById('fullStackBtn');
+        const uiuxBtn = document.getElementById('uiuxBtn');
+        const graphicBtn = document.getElementById('graphicBtn');
+
+        const fullStackSection = document.getElementById('fullStackSection');
+        const uiuxSection = document.getElementById('uiuxSection');
+        const graphicSection = document.getElementById('graphicSection');
+
+        const buttons = [fullStackBtn, uiuxBtn, graphicBtn];
+
+        function hideAllSections() {
+            fullStackSection.style.display = 'none';
+            uiuxSection.style.display = 'none';
+            graphicSection.style.display = 'none';
+        }
+
+        function removeActiveClasses() {
+            buttons.forEach(btn => btn.classList.remove('active'));
+        }
+
+        fullStackBtn.addEventListener('click', () => {
+            hideAllSections();
+            removeActiveClasses();
+            fullStackSection.style.display = 'block';
+            fullStackBtn.classList.add('active');
+        });
+
+        uiuxBtn.addEventListener('click', () => {
+            hideAllSections();
+            removeActiveClasses();
+            uiuxSection.style.display = 'block';
+            uiuxBtn.classList.add('active');
+        });
+
+        graphicBtn.addEventListener('click', () => {
+            hideAllSections();
+            removeActiveClasses();
+            graphicSection.style.display = 'block';
+            graphicBtn.classList.add('active');
+        });
+
     </script>
 </body>
 
