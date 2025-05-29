@@ -9,9 +9,8 @@
     <header id="header">
         <a href="#" class="logo">OLIVIA</a>
         <ul>
-            <li><a href="header" class="active" id="topText">Home</a></li>
-            <li><a href="#sec" id="topText">About Me</a></li>
-            <li><a href="#projectButtons" id="topText">Projects</a></li>
+            <li><a href="#sec" class="hover-underline-animation left">ABOUT ME</a></li>
+            <li><a href="#projectButtons" class="hover-underline-animation left">PROJECTS</a></li>
             <li>
                 <a href="https://github.com/zhangolivia7">
                     <img src="assets/github.png" alt="Github" />
@@ -38,17 +37,23 @@
         <img src="assets/landscape.png" id="landscape">
     </section>
     <div class="sec" id="sec">
-        <h2>About Me</h2>
-        <img src="assets/headshot.png" id="headshot">
-        <p>I am a rising junior at the University of Maryland, College Park pursuing an undergraduate degree.
-            I'm majoring in Computer Science with intent to double minor in Astronomy and Music & Culture.
-            Additionally, I'm involved as a Software Engineer for UMD's App Development Club, where I use my software
-            engineering skills for app/web development for companies like The Children's National Hospital, Amazon,
-            General Dynamics, and many more.
-            I'm also an organizer for the Bitcamp hackathon on the design team, responsible for graphic and UI/UX design
-            for the annual hackathon.
-            I'm interested in exploring the fields of Software Engineering, Design, and Machine Learning, and I am open
-            to such opportunities.</p>
+        <h2>ABOUT ME</h2>
+        <div class="flip-container">
+            <div class="flipper">
+                <img src="assets/Headshot.png" class="front" alt="Headshot">
+                <img src="assets/SillyHeadshot.png" class="back" alt="Silly Headshot">
+            </div>
+        </div>
+        <p>I was born and raised in San Diego, but right now, I'm an undergrad at the University of Maryland, College
+            Park, studying Computer Science.
+        </p>
+        <p>
+            On campus, I’m a Software Engineer for UMD's App Development Club and help
+            organize the annual Bitcamp Hackathon as part of the design team. I'm always eager to learn and explore new
+            ideas, especially in web and app development.
+        </p>
+        <p>Outside of school, I love figure skating, messing around with music production and songwriting, and I'm
+            always up for a good food run.</p>
     </div>
 
     <div class="sec">
@@ -97,7 +102,7 @@
     </div>
 
     <div class="sec">
-        <h2>Projects</h2>
+        <h2>PROJECTS</h2>
         <div id="projectButtons">
             <button id="fullStackBtn">Full Stack</button>
             <button id="uiuxBtn">UI/UX</button>
