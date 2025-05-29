@@ -1,75 +1,131 @@
 <html>
-    <head>
-        <link href="style.css" rel="stylesheet">
-        <title>Olivia's Website | Home</title>
-    </head>
-    <body>
-        <header id="header">
-            <a href="#" class="logo">OLIVIA</a>
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <!-- <li><a href="projects.html">Projects</a></li> -->
-                <li><a href="#">Contact</a></li>
 
-            </ul>
-        </header>
-        <section>
-            <img src="assets/stars.png" id="stars">
-            <h2 id="text">Olivia Zhang</h2>
-            <img src="assets/landscape.png" id="landscape">
-        </section>
-        <div class="sec" id="sec">
-            <h2>Sophomore CS student at the University of Maryland-College Park who loves building her ideas.</h2>
-            <div>
-                <ul>
-                    <li>High School</li>
-                    <li></li>
-                </ul>
+<head>
+    <link href="style.css" rel="stylesheet">
+    <title>Olivia's Website | Home</title>
+</head>
+
+<body>
+    <header id="header">
+        <a href="#" class="logo">OLIVIA</a>
+        <ul>
+            <li><a href="header" class="active">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+            <img src="assets/linkedin.png" href="www.linkedin.com/in/oliviaszhang">
+        </ul>
+    </header>
+    <section>
+        <img src="assets/stars.png" id="stars">
+        <h2 id="text">Olivia Zhang</h2>
+        <img src="assets/landscape.png" id="landscape">
+    </section>
+    <div class="sec" id="sec">
+        <h2>My Story</h2>
+        <img src="assets/headshot.png" id="headshot">
+        <p>I am a rising junior at the University of Maryland, College Park pursuing an undergraduate degree.
+            I'm majoring in Computer Science with intent to double minor in Astronomy and Music & Culture.
+            Additionally, I'm involved as a Software Engineer for UMD's App Development Club, where I use my software
+            engineering skills for app/web development for companies like The Children's National Hospital, Amazon,
+            General Dynamics, and many more.
+            I'm also an organizer for the Bitcamp hackathon on the design team, responsible for graphic and UI/UX design
+            for the annual hackathon.
+            I'm interested in exploring the fields of Software Engineering, Design, and Machine Learning, and I am open
+            to such opportunities.</p>
+    </div>
+
+    <div class="sec">
+        <div class="techSec">
+            <div class="tech">
+                <h3>Languages</h3>
+                <div class="techGrid">
+                    <img src="assets/sec3/dart.png">
+                    <img src="assets/sec3/java.webp">
+                    <img src="assets/sec3/javascript.webp">
+                    <img src="assets/sec3/python.png">
+                </div>
+                <p>Java, JS, Python, C</p>
+            </div>
+            <div class="tech">
+                <h3>Front-End</h3>
+                <div class="techGrid">
+                    <img src="assets/sec3/react.webp">
+                    <img src="assets/sec3/tailwind.png">
+                    <img src="assets/sec3/html.png">
+                    <img src="assets/sec3/css.png">
+                </div>
+                <p>React, Tailwind, HTML, CSS</p>
+            </div>
+            <div class="tech">
+                <h3>Back-End</h3>
+                <div class="techGrid">
+                    <img src="assets/sec3/nodejs.png">
+                    <img src="assets/sec3/mongoDB.png">
+                    <img src="assets/sec3/postgres.png">
+                    <img src="assets/sec3/flask.webp">
+                </div>
+                <p>Node.js, MongoDB, PostgreSQL, Flask</p>
+            </div>
+            <div class="tech">
+                <h3>Tools</h3>
+                <div class="techGrid">
+                    <img src="assets/sec3/git.webp">
+                    <img src="assets/sec3/github.webp">
+                    <img src="assets/sec3/figma.webp">
+                    <img src="assets/sec3/slack.png">
+                </div>
+                <p>Git, GitHub, Figma, Slack</p>
             </div>
         </div>
+    </div>
 
-        <div class="sec">
-            <h2>Projects</h2>
-            <div class="projects">
-                <h3>National Children's Hospital - Trach Sense</h3>
-                <div class="desc">
-                    <p>UMD App Dev Club</p>
-                    <p>September 2024 - Present</p>
-                </div>
-                <p>Building an application for a compact, universal CO2 sensing system for tracheostomy tubes to provide continuous and remote monitoring and quickly find complications in non-ventilated pediatric patients</p>
+    <div class="sec" id="projects">
+        <h2>Projects</h2>
+        <div class="projects">
+            <h3>National Children's Hospital - Trach Sense</h3>
+            <div class="desc">
+                <p>UMD App Dev Club</p>
+                <p>September 2024 - Present</p>
             </div>
-            <div class="projects">
-                <h3>Den - An Anxiety Relief App</h3>
-                <div class="desc">
-                    <p>Personal</p>
-                    <p>June 2024 - August 2024</p>
-                </div>
-                <p>Built a mobile application to reduce or soothe anxiety and panic attacks using activities like guided meditation, breathing exercises, and fidget toys for the Buildspace Nights and Weekends program.</p>
-            </div>
-            <div class="projects">
-                <h3>National Children's Hospital - Kapture</h3>
-                <div class="desc">
-                    <p>UMD App Dev Club</p>
-                    <p>January 2024 - May 2024</p>
-                </div>
-                <p>Worked with the Children’s National Hospital to build a web-based application for detecting cervical range of motion (rotation, flexion, and extension) and capturing neutral facial expressions for babies using facial data acquired using the camera from an iPhone.</p>
-            </div>
+            <p>Building an application for a compact, universal CO2 sensing system for tracheostomy tubes to provide
+                continuous and remote monitoring and quickly find complications in non-ventilated pediatric patients</p>
         </div>
-        
-        <script>
-            let stars = document.getElementById("stars");
-            let landscape = document.getElementById("landscape");
-            let text = document.getElementById("text");
-            let button = document.getElementById("button");
-            let header = document.querySelector('header');
+        <div class="projects">
+            <h3>Den - An Anxiety Relief App</h3>
+            <div class="desc">
+                <p>Personal</p>
+                <p>June 2024 - August 2024</p>
+            </div>
+            <p>Built a mobile application to reduce or soothe anxiety and panic attacks using activities like guided
+                meditation, breathing exercises, and fidget toys for the Buildspace Nights and Weekends program.</p>
+        </div>
+        <div class="projects">
+            <h3>National Children's Hospital - Kapture</h3>
+            <div class="desc">
+                <p>UMD App Dev Club</p>
+                <p>January 2024 - May 2024</p>
+            </div>
+            <p>Worked with the Children’s National Hospital to build a web-based application for detecting cervical
+                range of motion (rotation, flexion, and extension) and capturing neutral facial expressions for babies
+                using facial data acquired using the camera from an iPhone.</p>
+        </div>
+    </div>
 
-            window.addEventListener('scroll', function() {
-                let yVal = window.scrollY;
-                stars.style.left = yVal * 0.25 + 'px';
-                landscape.style.top = yVal * 0 + 'px';
-                text.style.marginTop = yVal * -2.0 + 'px';
-                header.style.top = yVal * 0.5 + 'px';
-            })
-        </script>
-    </body>
+    <script>
+        let stars = document.getElementById("stars");
+        let landscape = document.getElementById("landscape");
+        let text = document.getElementById("text");
+        let button = document.getElementById("button");
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function () {
+            let yVal = window.scrollY;
+            stars.style.left = yVal * 0.25 + 'px';
+            landscape.style.top = yVal * 0 + 'px';
+            text.style.marginTop = yVal * -2.0 + 'px';
+            header.style.top = yVal * 0.5 + 'px';
+        })
+    </script>
+</body>
+
 </html>
