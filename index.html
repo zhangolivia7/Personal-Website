@@ -9,21 +9,36 @@
     <header id="header">
         <a href="#" class="logo">OLIVIA</a>
         <ul>
-            <li><a href="header" class="active">Home</a></li>
+            <li><a href="header" class="active" id="topText">Home</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#">Contact</a></li>
-            <li><img src="assets/linkedin.png" href="www.linkedin.com/in/oliviaszhang" target="_blank"></li>
-            <li><img src="assets/email.png" href="mailto:zhangolivia7@gmail.com"></li>
-            <li><img src="assets/resume.png" href="resume.pdf" target="_blank"></li>
+            <li>
+                <a href="https://www.linkedin.com/in/oliviaszhang" target="_blank">
+                    <img src="assets/linkedin.png" alt="LinkedIn" />
+                </a>
+            </li>
+            <li>
+                <a href="mailto:zhangolivia7@gmail.com">
+                    <img src="assets/email.png" alt="Email" />
+                </a>
+            </li>
+            <li>
+                <a href="resume.pdf" target="_blank">
+                    <img src="assets/resume.png" alt="Resume" />
+                </a>
+            </li>
         </ul>
     </header>
     <section>
         <img src="assets/stars.png" id="stars">
-        <h2 id="text">Olivia Zhang</h2>
+        <div id="text">
+            <h2>Olivia Zhang</h2>
+            <h3>Programmer • UI/UX Designer • Graphic Designer</h3>
+        </div>
         <img src="assets/landscape.png" id="landscape">
     </section>
     <div class="sec" id="sec">
-        <h2>My Story</h2>
+        <h2>About Me</h2>
         <img src="assets/headshot.png" id="headshot">
         <p>I am a rising junior at the University of Maryland, College Park pursuing an undergraduate degree.
             I'm majoring in Computer Science with intent to double minor in Astronomy and Music & Culture.
@@ -81,35 +96,54 @@
         </div>
     </div>
 
-    <div class="sec" id="projects">
+    <div class="sec">
         <h2>Projects</h2>
-        <div class="projects">
-            <h3>National Children's Hospital - Trach Sense</h3>
-            <div class="desc">
-                <p>UMD App Dev Club</p>
-                <p>September 2024 - Present</p>
+        <div class="projects-section">
+            <!-- Project 1 -->
+            <div class="project">
+                <div class="project-image">
+                    <img src="assets/TrachSense.png" alt="TrachSense" />
+                </div>
+                <div class="project-info">
+                    <h3>Children National Hospital - TrachSense</h3>
+                    <h4>UMD App Dev Club</h4>
+                    <h4>September 2024 - May 2025</h4>
+                    <p>Built an application for a compact, universal CO2 sensing system for tracheostomy tubes to
+                        provide
+                        continuous and remote monitoring and quickly find complications in non-ventilated pediatric
+                        patients</p>
+                </div>
             </div>
-            <p>Building an application for a compact, universal CO2 sensing system for tracheostomy tubes to provide
-                continuous and remote monitoring and quickly find complications in non-ventilated pediatric patients</p>
-        </div>
-        <div class="projects">
-            <h3>Den - An Anxiety Relief App</h3>
-            <div class="desc">
-                <p>Personal</p>
-                <p>June 2024 - August 2024</p>
+
+            <!-- Project 2 -->
+            <div class="project">
+                <div class="project-info">
+                    <h3>Den - An Anxiety Relief App</h3>
+                    <h4>Personal</h4>
+                    <h4>June 2024 - August 2024</h4>
+                    <p>Built a mobile application to reduce or soothe anxiety and panic attacks using activities like
+                        guided meditation, breathing exercises, and fidget toys for the Buildspace Nights and Weekends
+                        program.</p>
+                </div>
+                <div class="project-image">
+                    <img src="assets/Den.png" alt="Den" />
+                </div>
             </div>
-            <p>Built a mobile application to reduce or soothe anxiety and panic attacks using activities like guided
-                meditation, breathing exercises, and fidget toys for the Buildspace Nights and Weekends program.</p>
-        </div>
-        <div class="projects">
-            <h3>National Children's Hospital - Kapture</h3>
-            <div class="desc">
-                <p>UMD App Dev Club</p>
-                <p>January 2024 - May 2024</p>
+
+            <!-- Project 3 -->
+            <div class="project">
+                <div class="project-image">
+                    <img src="assets/TrachSense2.png" alt="TrachSense 2" />
+                </div>
+                <div class="project-info">
+                    <h3>Children's National Hospital - Kapture</h3>
+                    <h4>UMD App Dev Club</h4>
+                    <h4>January 2024 - May 2024</h4>
+                    <p>Built a web-based application for detecting
+                        cervical range of motion (rotation, flexion, and extension) and capturing neutral facial
+                        expressions for babies using facial data acquired using the camera from an iPhone.</p>
+                </div>
             </div>
-            <p>Worked with the Children’s National Hospital to build a web-based application for detecting cervical
-                range of motion (rotation, flexion, and extension) and capturing neutral facial expressions for babies
-                using facial data acquired using the camera from an iPhone.</p>
         </div>
     </div>
 

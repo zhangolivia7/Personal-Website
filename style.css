@@ -59,7 +59,7 @@ header ul li a.active {
 }
 
 header img {
-    width: 70px;
+    width: 65px;
     padding: 6px 15px;
 }
 
@@ -102,9 +102,9 @@ section img {
 }
 
 section #text {
-    font-size: 1000%;
+    font-size: 800%;
     left: 50%;
-    transform: translate(-50%, -10%);
+    transform: translate(-50%, -25%);
 }
 
 section img#landscape {
@@ -116,11 +116,16 @@ section img#landscape {
     color: #fff;
     white-space: nowrap;
     z-index: 9;
+    text-align: center;
+}
+
+#text h3 {
+    font-size: 25%;
 }
 
 .sec {
     position: relative;
-    padding: 100px 100px 0px 100px;
+    padding: 100px 300px 0px 300px;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -154,10 +159,6 @@ section img#landscape {
     margin: 20px;
 }
 
-.projects {
-    padding-bottom: 30px;
-}
-
 .techSec {
     display: flex;
     justify-content: center;
@@ -169,17 +170,21 @@ section img#landscape {
     text-align: center;
 }
 
+.tech p {
+    padding-top: 20px;
+}
+
 .techGrid {
     display: grid;
     grid-template-columns: repeat(2, 30%);
-    gap: 5%;
+    gap: 10%;
     justify-content: center;
     margin-bottom: 20px;
 
 }
 
 .techGrid img {
-    width: 100%;
+    width: 120%;
     height: auto;
     object-fit: contain;
 }
@@ -187,4 +192,63 @@ section img#landscape {
 .tech h3 {
     font-size: 2em;
     margin-bottom: 20px;
+}
+
+.project {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #fff;
+    margin-bottom: 30px;
+}
+
+.project-image {
+    flex: 3;
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.project-info {
+    flex: 1;
+    max-width: 500px;
+    height: auto;
+    padding: 30px;
+    flex: 1;
+}
+
+.project-info h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #231f1f;
+}
+
+.project-info h4 {
+    margin-bottom: 10px;
+    color: #231f1f;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.project-info p {
+    color: #231f1f;
+    font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+    .project {
+        flex-direction: column;
+    }
+
+    .project.reverse {
+        flex-direction: column;
+    }
+
+    .project-image img {
+        max-width: 100%;
+    }
 }
