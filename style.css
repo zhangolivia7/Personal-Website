@@ -59,8 +59,8 @@ header ul li #topText.active {
 }
 
 header img {
-    width: 65px;
-    padding: 6px 15px;
+    width: 40px;
+    padding: 0px 5px;
 }
 
 header img:hover {
