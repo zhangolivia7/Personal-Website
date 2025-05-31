@@ -197,7 +197,7 @@ a {
     align-items: center;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .header {
         height: 150px;
     }
@@ -217,7 +217,7 @@ a {
     }
 }
 
-@media (min-width: 601px) {
+@media (min-width: 768px) {
     .header {
         height: 200px;
     }
