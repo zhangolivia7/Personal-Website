@@ -23,7 +23,7 @@ h4 {
 }
 
 .header {
-    background: url('assets/links/placeholder.png') center/cover no-repeat;
+    background: url('assets/links/header.png') center/cover no-repeat;
     z-index: 1;
     position: relative;
 }
