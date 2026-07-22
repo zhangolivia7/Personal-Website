@@ -3,315 +3,148 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Olivia Zhang — Programmer, UI/UX Designer, and Graphic Designer studying Computer Science at the University of Maryland." />
+    <meta name="description" content="Olivia Zhang — Software Engineer who loves product design, UI/UX, and front-end dev." />
     <meta property="og:title" content="Olivia Zhang | Portfolio" />
-    <meta property="og:description" content="Programmer, UI/UX Designer, and Graphic Designer studying Computer Science at the University of Maryland." />
-    <meta property="og:image" content="assets/landscape.png" />
+    <meta property="og:description" content="Olivia Zhang — Software Engineer who loves product design, UI/UX, and front-end dev." />
+    <meta property="og:image" content="assets/Headshot.png" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://zhangolivia7.github.io/Personal-Website/" />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <link href="style.css" rel="stylesheet">
-    <title>Olivia's Website | Home</title>
+    <title>Olivia Zhang</title>
 </head>
 
 <body>
 
-    <header id="header">
-        <a href="#" class="logo">OLIVIA</a>
-        <button id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <ul id="navList">
-            <li><a href="#sec" class="hover-underline-animation left">ABOUT ME</a></li>
-            <li><a href="#projectButtons" class="hover-underline-animation left">PROJECTS</a></li>
-            <li><a href="links.html" class="hover-underline-animation left">LINKS</a></li>
-            <li>
-                <a href="https://github.com/zhangolivia7">
-                    <img src="assets/github.png" alt="Github" />
-                </a>
-            </li>
-            <li>
-                <a href="https://www.linkedin.com/in/oliviaszhang" target="_blank">
-                    <img src="assets/linkedin.png" alt="LinkedIn" />
-                </a>
-            </li>
-            <li>
-                <a href="assets/resume.pdf" download>
-                    <img src="assets/download.png" alt="Download Resume" />
-                </a>
-            </li>
+    <nav class="topbar">
+        <a href="#" class="brand">OZ</a>
+        <ul class="nav-links">
+            <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#contact">CONTACT</a></li>
         </ul>
-    </header>
-    <section>
-        <img src="assets/stars.png" id="stars">
-        <div id="text">
-            <h2>Olivia Zhang</h2>
-            <h3>Programmer • UI/UX Designer • Graphic Designer</h3>
+        <a class="social" href="https://github.com/zhangolivia7" target="_blank" aria-label="GitHub">
+            <svg viewBox="0 0 16 16" width="20" height="20" fill="currentColor">
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
+                    0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01
+                    1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95
+                    0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68
+                    0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15
+                    0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8
+                    8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/>
+            </svg>
+        </a>
+    </nav>
+
+    <main class="desktop-hero">
+        <div class="intro-card">
+            <div class="polaroid" style="--r:-4deg">
+                <img src="assets/Headshot.png" alt="Olivia Zhang">
+                <p class="scrawl">it's me!</p>
+            </div>
+            <div class="intro-text">
+                <p><strong>Olivia</strong> is a software engineer who loves to play in: product design, UI/UX,
+                    front-end dev, prototyping, and
+                    <span class="peekaboo" tabindex="0">an unreasonable number of</span>
+                    ways to make the web a more fun place.
+                </p>
+            </div>
         </div>
-        <img src="assets/landscape.png" id="landscape">
+
+        <div class="folder-scatter">
+            <a class="folder-card" href="#projects" style="top:10%; left:9%; --r:-6deg;">
+                <span class="folder"></span>
+                <span class="caption">my work</span>
+            </a>
+            <a class="folder-card" href="#about" style="top:16%; right:10%; --r:5deg;">
+                <span class="folder"></span>
+                <span class="caption">the deets</span>
+            </a>
+            <a class="folder-card" href="#contact" style="bottom:16%; left:14%; --r:4deg;">
+                <span class="folder"></span>
+                <span class="caption">say hi</span>
+            </a>
+            <a class="folder-card" href="assets/resume.pdf" download style="bottom:20%; right:8%; --r:-4deg;">
+                <span class="folder"></span>
+                <span class="caption">the resume</span>
+            </a>
+            <a class="folder-card" href="links.html" style="top:48%; left:3%; --r:3deg;">
+                <span class="folder"></span>
+                <span class="caption">elsewhere</span>
+            </a>
+        </div>
+    </main>
+
+    <section id="projects" class="content-section">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-caption">— a few things I've built —</p>
+        <div class="placeholder-grid">
+            <div class="placeholder-card">
+                <div class="placeholder-thumb"></div>
+                <h3>Project Name</h3>
+                <p>One or two sentences on what this project does and why it's cool.</p>
+                <div class="tag-row"><span class="tag">Tech</span><span class="tag">Stack</span></div>
+            </div>
+            <div class="placeholder-card">
+                <div class="placeholder-thumb"></div>
+                <h3>Project Name</h3>
+                <p>One or two sentences on what this project does and why it's cool.</p>
+                <div class="tag-row"><span class="tag">Tech</span><span class="tag">Stack</span></div>
+            </div>
+            <div class="placeholder-card">
+                <div class="placeholder-thumb"></div>
+                <h3>Project Name</h3>
+                <p>One or two sentences on what this project does and why it's cool.</p>
+                <div class="tag-row"><span class="tag">Tech</span><span class="tag">Stack</span></div>
+            </div>
+        </div>
     </section>
-    <div class="sec" id="sec">
-        <h2>ABOUT ME</h2>
-        <div class="flip-container">
-            <div class="flipper">
-                <img src="assets/Headshot.png" class="front" alt="Headshot">
-                <img src="assets/SillyHeadshot.png" class="back" alt="Silly Headshot">
-            </div>
+
+    <section id="about" class="content-section">
+        <h2 class="section-title">About</h2>
+        <p class="section-caption">— the longer version —</p>
+        <div class="about-placeholder">
+            <p>This is where the fuller story goes — background, education, how you got into engineering, and
+                whatever else feels worth sharing. Swap this paragraph out for your own.</p>
         </div>
-        <p>I was born and raised in San Diego, but right now, I'm an undergrad at the University of Maryland, College
-            Park, studying Computer Science.
-        </p>
-        <p>
-            On campus, I’m a Software Engineer for UMD's App Development Club and help
-            organize the annual Bitcamp Hackathon as part of the design team. I'm always eager to learn and explore new
-            ideas, especially in web and app development.
-        </p>
-        <p>Outside of school, I love figure skating, messing around with music production and songwriting, and I'm
-            always up for a good food run.</p>
-    </div>
+    </section>
 
-    <div class="sec">
-        <div class="techSec">
-            <div class="tech">
-                <h3>Languages</h3>
-                <div class="techGrid">
-                    <img src="assets/sec3/dart.png">
-                    <img src="assets/sec3/java.webp">
-                    <img src="assets/sec3/javascript.webp">
-                    <img src="assets/sec3/python.png">
-                </div>
-                <p>Java, JS, Python, C</p>
-            </div>
-            <div class="tech">
-                <h3>Front-End</h3>
-                <div class="techGrid">
-                    <img src="assets/sec3/react.webp">
-                    <img src="assets/sec3/tailwind.png">
-                    <img src="assets/sec3/html.png">
-                    <img src="assets/sec3/css.png">
-                </div>
-                <p>React, Tailwind, HTML, CSS</p>
-            </div>
-            <div class="tech">
-                <h3>Back-End</h3>
-                <div class="techGrid">
-                    <img src="assets/sec3/nodejs.png">
-                    <img src="assets/sec3/mongoDB.png">
-                    <img src="assets/sec3/postgres.png">
-                    <img src="assets/sec3/flask.webp">
-                </div>
-                <p>Node.js, MongoDB, PostgreSQL, Flask</p>
-            </div>
-            <div class="tech">
-                <h3>Tools</h3>
-                <div class="techGrid">
-                    <img src="assets/sec3/git.webp">
-                    <img src="assets/sec3/github.webp">
-                    <img src="assets/sec3/figma.webp">
-                    <img src="assets/sec3/slack.png">
-                </div>
-                <p>Git, GitHub, Figma, Slack</p>
-            </div>
+    <section id="contact" class="content-section">
+        <h2 class="section-title">Contact</h2>
+        <p class="section-caption">— say hi —</p>
+        <div class="contact-links">
+            <a href="mailto:zhangolivia7@gmail.com">Email</a>
+            <a href="https://github.com/zhangolivia7" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/oliviaszhang" target="_blank">LinkedIn</a>
         </div>
-    </div>
+    </section>
 
-    <div class="sec">
-        <h2>PROJECTS</h2>
-        <div id="projectButtons">
-            <button id="fullStackBtn">Full Stack</button>
-            <button id="uiuxBtn">UI/UX</button>
-            <button id="graphicBtn">Graphic Design</button>
+    <footer class="player-bar">
+        <span class="player-track">now playing: portfolio.mp3</span>
+        <div class="player-controls">
+            <button aria-label="Previous">⏮</button>
+            <button aria-label="Play" id="playBtn">▶</button>
+            <button aria-label="Next">⏭</button>
         </div>
-        <div class="projects-section" id="fullStackSection">
-            <div class="project">
-                <div class="project-image">
-                    <img src="assets/TrachSense.png" alt="TrachSense" />
-                </div>
-                <div class="project-info">
-                    <h3>Children National Hospital - TrachSense</h3>
-                    <h4>UMD App Dev Club</h4>
-                    <h4>September 2024 - May 2025</h4>
-                    <p>Built an application for a compact, universal CO2 sensing system for tracheostomy tubes to
-                        provide
-                        continuous and remote monitoring and quickly find complications in non-ventilated pediatric
-                        patients</p>
-                </div>
-            </div>
+    </footer>
 
-            <div class="project">
-                <div class="project-info">
-                    <h3>Den - An Anxiety Relief App</h3>
-                    <h4>Personal</h4>
-                    <h4>June 2024 - August 2024</h4>
-                    <p>Built a mobile application to reduce or soothe anxiety and panic attacks using activities like
-                        guided meditation, breathing exercises, and fidget toys for the Buildspace Nights and Weekends
-                        program.</p>
-                </div>
-                <div class="project-image">
-                    <img src="assets/Den.png" alt="Den" />
-                </div>
-            </div>
-
-            <div class="project">
-                <div class="project-image">
-                    <img src="assets/TrachSense2.png" alt="TrachSense 2" />
-                </div>
-                <div class="project-info">
-                    <h3>Children's National Hospital - Kapture</h3>
-                    <h4>UMD App Dev Club</h4>
-                    <h4>January 2024 - May 2024</h4>
-                    <p>Built a web-based application for detecting
-                        cervical range of motion (rotation, flexion, and extension) and capturing neutral facial
-                        expressions for babies using facial data acquired using the camera from an iPhone.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="projects-section" id="uiuxSection">
-            <div class="project">
-                <div class="project-image">
-                    <img src="assets/ShellSeek.png" alt="ShellSeek" />
-                </div>
-                <div class="project-info">
-                    <h3>ShellSeek</h3>
-                    <h4>IDEA258U: Introduction to UI/UX Design</h4>
-                    <h4>January 2025 - May 2025</h4>
-                    <p>Re-designed and re-imagined the navigation app for University of Maryland students efficiently to
-                        locate buildings and rooms on campus, addressing issues with the current map.</p>
-                </div>
-            </div>
-
-            <div class="project">
-                <div class="project-info">
-                    <h3>Bitcamp Website</h3>
-                    <h4>Bitcamp</h4>
-                    <h4>October 2024 - April 2025</h4>
-                    <p>Collaborated with a team to research and design the Bitcamp hackathon website and mobile app
-                        using Figma and other design resources.</p>
-                </div>
-                <div class="project-image">
-                    <img src="assets/Bitcamp.png" alt="Bitcamp" />
-                </div>
-            </div>
-        </div>
-
-        <div class="projects-section" id="graphicSection">
-            <div class="project">
-                <div class="project-image">
-                    <img src="assets/Twitch.png" alt="Twitch" />
-                </div>
-                <div class="project-info">
-                    <h3>Stream Assets</h3>
-                    <h4>Personal</h4>
-                    <h4>August 2024-August 2024</h4>
-                    <p>Designed re-branded stream assets for a small streamer, such as banners, screens, icons, etc.,
-                        all adhering to their branding and requests.</p>
-                </div>
-            </div>
-
-            <div class="project">
-                <div class="project-info">
-                    <h3>Lunar Banquet Graphics</h3>
-                    <h4>Chinese Student Association</h4>
-                    <h4>January 2024 - February 2024</h4>
-                    <p>Collaborated with the marketing team to design a variety of engaging graphics for CSA's Lunar
-                        Banquet, aimed at attracting and welcoming attendees.</p>
-                </div>
-                <div class="project-image">
-                    <img src="assets/Lunar.png" alt="Lunar Banquet" />
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="footer">
-        <p>© Olivia Zhang, 2026</p>
-        <div id="icons">
-            <a href="https://github.com/zhangolivia7" target="_blank">
-                <img src="assets/github.png" alt="Github" />
-            </a>
-            <a href="https://www.linkedin.com/in/oliviaszhang" target="_blank">
-                <img src="assets/linkedin.png" alt="LinkedIn" />
-            </a>
-            <a href="assets/resume.pdf" download>
-                <img src="assets/download.png" alt="Download Resume" />
-            </a>
-        </div>
-    </div>
     <script>
-        let stars = document.getElementById("stars");
-        let landscape = document.getElementById("landscape");
-        let text = document.getElementById("text");
-        let button = document.getElementById("button");
-        let header = document.querySelector('header');
-        const menuToggle = document.getElementById('menuToggle');
-        const navList = document.getElementById('navList');
-
-        menuToggle.addEventListener('click', () => {
-            const isOpen = navList.classList.toggle('open');
-            menuToggle.classList.toggle('open', isOpen);
-            menuToggle.setAttribute('aria-expanded', isOpen);
+        const playBtn = document.getElementById('playBtn');
+        playBtn.addEventListener('click', () => {
+            const playing = playBtn.textContent.trim() === '▶';
+            playBtn.textContent = playing ? '⏸' : '▶';
         });
 
-        navList.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                navList.classList.remove('open');
-                menuToggle.classList.remove('open');
-                menuToggle.setAttribute('aria-expanded', false);
+        const revealTargets = document.querySelectorAll('.content-section, .folder-card, .intro-card');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                    observer.unobserve(entry.target);
+                }
             });
-        });
-
-        window.addEventListener('scroll', function () {
-            let yVal = window.scrollY;
-            stars.style.left = yVal * 0.25 + 'px';
-            landscape.style.top = yVal * 0 + 'px';
-            text.style.marginTop = yVal * -2.0 + 'px';
-            header.style.top = yVal * 0.5 + 'px';
-        })
-
-        const fullStackBtn = document.getElementById('fullStackBtn');
-        const uiuxBtn = document.getElementById('uiuxBtn');
-        const graphicBtn = document.getElementById('graphicBtn');
-
-        const fullStackSection = document.getElementById('fullStackSection');
-        const uiuxSection = document.getElementById('uiuxSection');
-        const graphicSection = document.getElementById('graphicSection');
-
-        const buttons = [fullStackBtn, uiuxBtn, graphicBtn];
-
-        function hideAllSections() {
-            fullStackSection.style.display = 'none';
-            uiuxSection.style.display = 'none';
-            graphicSection.style.display = 'none';
-        }
-
-        function removeActiveClasses() {
-            buttons.forEach(btn => btn.classList.remove('active'));
-        }
-
-        fullStackBtn.addEventListener('click', () => {
-            hideAllSections();
-            removeActiveClasses();
-            fullStackSection.style.display = 'block';
-            fullStackBtn.classList.add('active');
-        });
-
-        uiuxBtn.addEventListener('click', () => {
-            hideAllSections();
-            removeActiveClasses();
-            uiuxSection.style.display = 'block';
-            uiuxBtn.classList.add('active');
-        });
-
-        graphicBtn.addEventListener('click', () => {
-            hideAllSections();
-            removeActiveClasses();
-            graphicSection.style.display = 'block';
-            graphicBtn.classList.add('active');
-        });
-
+        }, { threshold: 0.15 });
+        revealTargets.forEach(el => observer.observe(el));
     </script>
 </body>
 
