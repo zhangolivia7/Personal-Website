@@ -94,6 +94,40 @@ header img:hover {
     cursor: pointer;
 }
 
+#menuToggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10001;
+    padding: 0;
+}
+
+#menuToggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 3px;
+    transition: 0.3s ease;
+}
+
+#menuToggle.open span:nth-child(1) {
+    transform: translateY(9.5px) rotate(45deg);
+}
+
+#menuToggle.open span:nth-child(2) {
+    opacity: 0;
+}
+
+#menuToggle.open span:nth-child(3) {
+    transform: translateY(-9.5px) rotate(-45deg);
+}
+
 section {
     position: relative;
     width: 100%;
@@ -397,4 +431,74 @@ button.active::after {
 #footer img {
     width: 55px;
     padding-left: 30px;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 20px 25px;
+    }
+
+    #menuToggle {
+        display: flex;
+    }
+
+    header ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        background: #231f1f;
+        padding: 20px 25px 30px;
+    }
+
+    header ul.open {
+        display: flex;
+    }
+
+    header ul li {
+        margin-left: 0;
+    }
+
+    section {
+        padding: 100px 25px 50px;
+    }
+
+    section #text {
+        font-size: 200%;
+    }
+
+    .sec {
+        padding: 60px 25px 0px;
+    }
+
+    .flip-container {
+        width: 60%;
+    }
+
+    .tech {
+        flex: 1 1 45%;
+    }
+
+    #footer {
+        width: 90%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #footer img {
+        padding-left: 15px;
+    }
+
+    #projectButtons {
+        gap: 5px;
+    }
+
+    #projectButtons button {
+        font-size: 13px;
+        padding: 1em 0.75em;
+    }
 }

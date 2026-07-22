@@ -1,6 +1,15 @@
 <html>
 
 <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Olivia Zhang — Programmer, UI/UX Designer, and Graphic Designer studying Computer Science at the University of Maryland." />
+    <meta property="og:title" content="Olivia Zhang | Portfolio" />
+    <meta property="og:description" content="Programmer, UI/UX Designer, and Graphic Designer studying Computer Science at the University of Maryland." />
+    <meta property="og:image" content="assets/landscape.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://zhangolivia7.github.io/Personal-Website/" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <link href="style.css" rel="stylesheet">
     <title>Olivia's Website | Home</title>
 </head>
@@ -9,8 +18,12 @@
 
     <header id="header">
         <a href="#" class="logo">OLIVIA</a>
-        <ul>
-            <li><p>Mobile version coming soon!</p></li>
+        <button id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul id="navList">
             <li><a href="#sec" class="hover-underline-animation left">ABOUT ME</a></li>
             <li><a href="#projectButtons" class="hover-underline-animation left">PROJECTS</a></li>
             <li><a href="links.html" class="hover-underline-animation left">LINKS</a></li>
@@ -214,7 +227,7 @@
     </div>
 
     <div id="footer">
-        <p>© Olivia Zhang, 2025</p>
+        <p>© Olivia Zhang, 2026</p>
         <div id="icons">
             <a href="https://github.com/zhangolivia7" target="_blank">
                 <img src="assets/github.png" alt="Github" />
@@ -233,6 +246,22 @@
         let text = document.getElementById("text");
         let button = document.getElementById("button");
         let header = document.querySelector('header');
+        const menuToggle = document.getElementById('menuToggle');
+        const navList = document.getElementById('navList');
+
+        menuToggle.addEventListener('click', () => {
+            const isOpen = navList.classList.toggle('open');
+            menuToggle.classList.toggle('open', isOpen);
+            menuToggle.setAttribute('aria-expanded', isOpen);
+        });
+
+        navList.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navList.classList.remove('open');
+                menuToggle.classList.remove('open');
+                menuToggle.setAttribute('aria-expanded', false);
+            });
+        });
 
         window.addEventListener('scroll', function () {
             let yVal = window.scrollY;
