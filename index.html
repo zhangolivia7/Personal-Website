@@ -10,16 +10,23 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://zhangolivia7.github.io/Personal-Website/" />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital@1&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
     <title>Olivia Zhang</title>
 </head>
 
 <body>
 
+    <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+    <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
     <nav class="topbar">
         <a href="#" class="brand">OZ</a>
         <ul class="nav-links">
             <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#building">BUILDING</a></li>
             <li><a href="#about">ABOUT</a></li>
             <li><a href="#contact">CONTACT</a></li>
         </ul>
@@ -39,7 +46,7 @@
     <main class="desktop-hero">
         <div class="intro-card">
             <div class="polaroid" style="--r:-4deg">
-                <img src="assets/Headshot.png" alt="Olivia Zhang">
+                <img src="assets/Headshot.png" alt="Olivia Zhang" loading="eager" decoding="async">
                 <p class="scrawl">it's me!</p>
             </div>
             <div class="intro-text">
@@ -52,24 +59,24 @@
         </div>
 
         <div class="folder-scatter">
-            <a class="folder-card" href="#projects" style="top:10%; left:9%; --r:-6deg;">
-                <span class="folder"></span>
+            <a class="folder-card" href="#projects" style="top:10%; left:9%; --r:-6deg; --i:0;">
+                <span class="folder-float"><span class="folder"></span></span>
                 <span class="caption">my work</span>
             </a>
-            <a class="folder-card" href="#about" style="top:16%; right:10%; --r:5deg;">
-                <span class="folder"></span>
+            <a class="folder-card" href="#about" style="top:16%; right:10%; --r:5deg; --i:1;">
+                <span class="folder-float"><span class="folder"></span></span>
                 <span class="caption">the deets</span>
             </a>
-            <a class="folder-card" href="#contact" style="bottom:16%; left:14%; --r:4deg;">
-                <span class="folder"></span>
+            <a class="folder-card" href="#contact" style="bottom:16%; left:14%; --r:4deg; --i:2;">
+                <span class="folder-float"><span class="folder"></span></span>
                 <span class="caption">say hi</span>
             </a>
-            <a class="folder-card" href="assets/resume.pdf" download style="bottom:20%; right:8%; --r:-4deg;">
-                <span class="folder"></span>
+            <a class="folder-card" href="assets/resume.pdf" download style="bottom:20%; right:8%; --r:-4deg; --i:3;">
+                <span class="folder-float"><span class="folder"></span></span>
                 <span class="caption">the resume</span>
             </a>
-            <a class="folder-card" href="links.html" style="top:48%; left:3%; --r:3deg;">
-                <span class="folder"></span>
+            <a class="folder-card" href="links.html" style="top:48%; left:3%; --r:3deg; --i:4;">
+                <span class="folder-float"><span class="folder"></span></span>
                 <span class="caption">elsewhere</span>
             </a>
         </div>
@@ -78,34 +85,179 @@
     <section id="projects" class="content-section">
         <h2 class="section-title">Projects</h2>
         <p class="section-caption">— a few things I've built —</p>
-        <div class="placeholder-grid">
-            <div class="placeholder-card">
-                <div class="placeholder-thumb"></div>
-                <h3>Project Name</h3>
-                <p>One or two sentences on what this project does and why it's cool.</p>
-                <div class="tag-row"><span class="tag">Tech</span><span class="tag">Stack</span></div>
+        <div class="project-grid">
+            <article class="project-card" style="--i:0">
+                <a class="project-thumb" href="https://github.com/zhangolivia7" target="_blank" rel="noopener">
+                    <img src="assets/TrachSense.png" alt="TrachSense mobile app screenshot" loading="lazy" decoding="async">
+                </a>
+                <div class="project-body">
+                    <div class="project-heading">
+                        <h3>TrachSense</h3>
+                        <a class="project-link" href="https://github.com/zhangolivia7" target="_blank" rel="noopener" aria-label="View TrachSense on GitHub">
+                            <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <p>Remote CO2 monitoring for tracheostomy patients — built with Children's National Hospital
+                        so non-ventilated pediatric patients get real-time complication alerts instead of a
+                        nurse checking in.</p>
+                    <div class="tag-row">
+                        <span class="tag"><img src="assets/sec3/dart.png" alt="" loading="lazy" decoding="async">Flutter</span>
+                        <span class="tag"><img src="assets/sec3/python.png" alt="" loading="lazy" decoding="async">Python</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card" style="--i:1">
+                <a class="project-thumb" href="https://youtu.be/o8s2vsBwTZY" target="_blank" rel="noopener">
+                    <img src="assets/Den.png" alt="Den anxiety-relief app screenshot" loading="lazy" decoding="async">
+                </a>
+                <div class="project-body">
+                    <div class="project-heading">
+                        <h3>Den</h3>
+                        <a class="project-link" href="https://youtu.be/o8s2vsBwTZY" target="_blank" rel="noopener" aria-label="Watch the Den demo on YouTube">
+                            <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor">
+                                <path d="M4 2.5v11l10-5.5-10-5.5Z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <p>A React Native app built solo during Buildspace Nights & Weekends to talk yourself down
+                        from a panic attack — guided breathing, meditation, and fidget toys in one place.</p>
+                    <div class="tag-row">
+                        <span class="tag"><img src="assets/sec3/react.webp" alt="" loading="lazy" decoding="async">React Native</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card" style="--i:2">
+                <a class="project-thumb" href="https://github.com/zhangolivia7" target="_blank" rel="noopener">
+                    <img src="assets/Bitcamp.png" alt="Bitcamp hackathon website screenshot" loading="lazy" decoding="async">
+                </a>
+                <div class="project-body">
+                    <div class="project-heading">
+                        <h3>Bitcamp Design</h3>
+                        <a class="project-link" href="https://github.com/zhangolivia7" target="_blank" rel="noopener" aria-label="View Bitcamp work on GitHub">
+                            <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <p>UI/UX and front-end for a 1,000+ attendee hackathon's website as UMD Bitcamp's Design
+                        Team Organizer — the thing every participant sees before they ever set foot in the
+                        venue.</p>
+                    <div class="tag-row">
+                        <span class="tag"><img src="assets/sec3/figma.webp" alt="" loading="lazy" decoding="async">Figma</span>
+                        <span class="tag"><img src="assets/sec3/html.png" alt="" loading="lazy" decoding="async">HTML/CSS</span>
+                        <span class="tag"><img src="assets/sec3/javascript.webp" alt="" loading="lazy" decoding="async">JavaScript</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section id="building" class="content-section building-section">
+        <h2 class="section-title">Building</h2>
+        <p class="section-caption">— what I'm working on right now —</p>
+        <div class="building-card">
+            <span class="building-tape" aria-hidden="true"></span>
+            <h3 class="building-headline">Capy's Journey — a mindfulness game for kids</h3>
+            <p class="building-hook">A gamified mindfulness mobile app for kids ages 6–14 — meditation and
+                breathing exercises reframed as an adventure — built in Unity/C# with a Firebase backend.</p>
+            <p class="building-role"><strong>My role:</strong> Co-founder &amp; CPTO — spanning product,
+                engineering, and marketing, not just code.</p>
+            <div class="stat-chip-row">
+                <span class="stat-chip">🚀 Accepted into the Mokhtarzada Hatchery accelerator</span>
+                <span class="stat-chip">🏆 Winner — Shore Hatchery pitch competition</span>
+                <span class="stat-chip">⚡ Youngest team of 13 finalists</span>
             </div>
-            <div class="placeholder-card">
-                <div class="placeholder-thumb"></div>
-                <h3>Project Name</h3>
-                <p>One or two sentences on what this project does and why it's cool.</p>
-                <div class="tag-row"><span class="tag">Tech</span><span class="tag">Stack</span></div>
+            <div class="building-tags">
+                <span class="building-tag">Mobile dev — Unity &amp; Firebase</span>
+                <span class="building-tag">Product design — cosmetics &amp; reward systems</span>
+                <span class="building-tag">Content strategy — video essays &amp; social</span>
             </div>
-            <div class="placeholder-card">
-                <div class="placeholder-thumb"></div>
-                <h3>Project Name</h3>
-                <p>One or two sentences on what this project does and why it's cool.</p>
-                <div class="tag-row"><span class="tag">Tech</span><span class="tag">Stack</span></div>
+            <div class="building-visual">
+                <div class="phone-mockup">
+                    <div class="phone-notch"></div>
+                    <div class="phone-screen">
+                        <div class="capy-avatar">
+                            <span class="capy-ear capy-ear--left"></span>
+                            <span class="capy-ear capy-ear--right"></span>
+                            <span class="capy-face"></span>
+                        </div>
+                        <p class="phone-wordmark">capy's journey</p>
+                        <div class="wardrobe-row">
+                            <span class="wardrobe-item" style="--c:#ffd08a"></span>
+                            <span class="wardrobe-item" style="--c:#8ad0c2"></span>
+                            <span class="wardrobe-item" style="--c:#f2a7bd"></span>
+                            <span class="wardrobe-item" style="--c:#a3c9f9"></span>
+                        </div>
+                        <div class="streak-bar"><span class="streak-fill"></span></div>
+                    </div>
+                </div>
             </div>
+            <a class="building-cta" href="https://apps.apple.com/us/app/capy-calm-kids-meditation/id6760802602"
+                target="_blank" rel="noopener">
+                View on the App Store
+                <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor"
+                    stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 3h7v7" />
+                    <path d="M13 3 4 12" />
+                </svg>
+            </a>
         </div>
     </section>
 
     <section id="about" class="content-section">
         <h2 class="section-title">About</h2>
         <p class="section-caption">— the longer version —</p>
-        <div class="about-placeholder">
-            <p>This is where the fuller story goes — background, education, how you got into engineering, and
-                whatever else feels worth sharing. Swap this paragraph out for your own.</p>
+        <div class="about-content">
+            <p class="about-intro">Olivia is a junior studying Computer Science at the University of Maryland
+                who builds things at the intersection of healthcare, wellness, and good UI — from a remote
+                patient-monitoring tool for a children's hospital, to an anxiety-relief app, to the website
+                1,000+ hackathon attendees see first.</p>
+
+            <div class="stat-grid">
+                <div class="stat-tile">
+                    <span class="stat-num">6+</span>
+                    <span class="stat-label">projects shipped since 2024</span>
+                </div>
+                <div class="stat-tile">
+                    <span class="stat-num">1,000+</span>
+                    <span class="stat-label">hackathon attendees reached</span>
+                </div>
+                <div class="stat-tile">
+                    <span class="stat-num">2027</span>
+                    <span class="stat-label">B.S. Computer Science, UMD</span>
+                </div>
+                <div class="stat-tile">
+                    <span class="stat-num">2</span>
+                    <span class="stat-label">languages, fluent — EN / 中文</span>
+                </div>
+            </div>
+
+            <ol class="timeline">
+                <li class="timeline-item">
+                    <span class="timeline-date">Jan 2024</span>
+                    <span class="timeline-text"><strong>Kapture</strong> — facial-tracking motion detection for
+                        patients at Children's National Hospital</span>
+                </li>
+                <li class="timeline-item">
+                    <span class="timeline-date">Jun 2024</span>
+                    <span class="timeline-text"><strong>Den</strong> — anxiety-relief app, built during
+                        Buildspace Nights & Weekends</span>
+                </li>
+                <li class="timeline-item">
+                    <span class="timeline-date">Sep 2024</span>
+                    <span class="timeline-text"><strong>TrachSense</strong> ships; becomes Design Team
+                        Organizer for UMD Bitcamp</span>
+                </li>
+                <li class="timeline-item">
+                    <span class="timeline-date">2025 — now</span>
+                    <span class="timeline-text">Building <strong>Gather</strong> and <strong>Capy's
+                            Journey</strong></span>
+                </li>
+            </ol>
         </div>
     </section>
 
@@ -119,33 +271,18 @@
         </div>
     </section>
 
-    <footer class="player-bar">
+    <footer class="player-bar" id="playerBar">
         <span class="player-track">now playing: portfolio.mp3</span>
         <div class="player-controls">
             <button aria-label="Previous">⏮</button>
             <button aria-label="Play" id="playBtn">▶</button>
             <button aria-label="Next">⏭</button>
         </div>
+        <button class="player-toggle" id="playerToggle" aria-label="Toggle player" aria-expanded="false">♪</button>
+        <audio id="bg-audio" src="assets/ambient.mp3" loop preload="none"></audio>
     </footer>
 
-    <script>
-        const playBtn = document.getElementById('playBtn');
-        playBtn.addEventListener('click', () => {
-            const playing = playBtn.textContent.trim() === '▶';
-            playBtn.textContent = playing ? '⏸' : '▶';
-        });
-
-        const revealTargets = document.querySelectorAll('.content-section, .folder-card, .intro-card');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('in-view');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.15 });
-        revealTargets.forEach(el => observer.observe(el));
-    </script>
+    <script src="assets/main.js" defer></script>
 </body>
 
 </html>
