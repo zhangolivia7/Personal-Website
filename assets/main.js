@@ -9,21 +9,12 @@
     }
 
     assignStagger('.folder-card');
-    assignStagger('.project-card');
-    assignStagger('.stat-tile');
-    assignStagger('.timeline-item');
-    assignStagger('.stat-chip');
-    assignStagger('.building-tag');
 
     // ---------- Scroll reveal ----------
+    // Restrained on purpose: a fast opacity-only fade on top-level containers,
+    // no per-child stagger and no vertical movement.
 
-    var revealSelectors = [
-        '.content-section', '.folder-card', '.intro-card',
-        '.section-title', '.section-caption',
-        '.project-card', '.stat-tile', '.timeline-item', '.about-intro',
-        '.building-headline', '.building-hook', '.building-role',
-        '.stat-chip', '.building-tag', '.building-visual', '.building-cta'
-    ];
+    var revealSelectors = ['.content-section', '.folder-card', '.intro-card'];
     var revealTargets = document.querySelectorAll(revealSelectors.join(','));
     var revealObserver = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
@@ -83,7 +74,7 @@
         });
     }
 
-    // ---------- Custom cursor ----------
+    // ---------- Custom cursor (snappy glass halo) ----------
 
     if (supportsFinePointer && !prefersReducedMotion) {
         document.documentElement.classList.add('has-custom-cursor');
@@ -94,16 +85,19 @@
         var mouseY = window.innerHeight / 2;
         var ringX = mouseX;
         var ringY = mouseY;
+        // Higher lerp = less lag. macOS feels crisp; keep a whisper of follow.
+        var ringEase = 0.42;
 
         window.addEventListener('mousemove', function (e) {
             mouseX = e.clientX;
             mouseY = e.clientY;
+            // Dot snaps instantly - like the system pointer tip
             dot.style.transform = 'translate3d(' + mouseX + 'px,' + mouseY + 'px,0) translate(-50%,-50%)';
         });
 
         function animateRing() {
-            ringX += (mouseX - ringX) * 0.18;
-            ringY += (mouseY - ringY) * 0.18;
+            ringX += (mouseX - ringX) * ringEase;
+            ringY += (mouseY - ringY) * ringEase;
             ring.style.transform = 'translate3d(' + ringX + 'px,' + ringY + 'px,0) translate(-50%,-50%)';
             requestAnimationFrame(animateRing);
         }
